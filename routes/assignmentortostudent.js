@@ -38,7 +38,7 @@ router.post('/modifyMentor',async (req,res)=>{
     try {
         let stud = await student.findById(req.body._id);
         console.log(stud);
-        const oldMentorId = stud?.mentorAssigned; //save the old mentor id  for updating studAssignedList later
+        const oldMentorId = stud.mentorAssigned; //save the old mentor id  for updating studAssignedList later
         stud.mentorAssigned = req.body.newMentorId;
         stud.save()
         //remove that student from oldmentor assignedlist and in new mentor assigned list
