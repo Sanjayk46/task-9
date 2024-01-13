@@ -1,0 +1,12 @@
+step1: create mentor: for studentsAssigned not give any input
+step2: create student with mentor id
+step3: /newMentor - give a post request like this
+{
+  "_id": "your_mentor_id_here",
+  "studentsArray": ["student_id_1", "student_id_2", "student_id_3"]
+}
+step 4: /modifyMentor - give post request like this
+{
+  "_id": "your_student_id_here", -(studentId)
+  "newMentorId": "your_new_mentor_id_here",
+}
